@@ -1,0 +1,45 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Muli', sans-serif;;
+    font-size: 24px;
+    background-image: 
+        linear-gradient(
+            to top right,
+            blueviolet,
+            darkmagenta
+        );
+}
+
+.btn{
+    padding: 2rem 4rem;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: tomato;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    height: 4.5rem;
+    width: 100%;
+    left: 1rem;
+    background-color: red;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.btn:active{
+    margin: 0.75rem 0rem 0rem 0.75rem;
+}
+
+.btn:active::before{
+    bottom: 0.1rem;
+    left: -0.1rem;
+}
